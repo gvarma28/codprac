@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World")
 	scanner := bufio.NewScanner(os.Stdin)
 
 	scanner.Scan()
