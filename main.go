@@ -21,17 +21,22 @@ func main() {
 		k, _ := strconv.Atoi(temp[1])
 
 		scanner.Scan()
-		inputArr := strings.Split(scanner.Text(), " ")
-		inputIntArr := []int{}
-		for _, val := range inputArr {
+		strArr := strings.Split(scanner.Text(), " ")
+		var arr []int
+		for _, val := range strArr {
 			newVal, _ := strconv.Atoi(val)
-			inputIntArr = append(inputIntArr, newVal)
+			arr = append(arr, newVal)
 		}
 
 		scanner.Scan()
 		s := scanner.Text()
-		fmt.Printf("%v, %v, %v, %v\n", n, k, s, inputIntArr)
+
+		solve(n, k, s, arr)
 	}
+}
+
+func solve(n, k int, s string, arr []int) {
+	fmt.Printf("%v, %v, %v, %v\n", n, k, s, arr)
 }
 
 // compute power while applying modulo
