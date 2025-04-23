@@ -5,7 +5,7 @@ type MyHashSet struct {
 	size    int
 }
 
-func Constructor() MyHashSet {
+func MyHashSetConstructor() MyHashSet {
 	const defaultSize = 10007
 	return MyHashSet{
 		size:    defaultSize,
@@ -47,3 +47,11 @@ func (set *MyHashSet) Contains(key int) bool {
 	}
 	return false
 }
+
+/**
+ * Your MyHashSet object will be instantiated and called as such:
+ * obj := MyHashSetConstructor();
+ * obj.Add(key);
+ * obj.Remove(key);
+ * param_3 := obj.Contains(key);
+ */
